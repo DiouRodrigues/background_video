@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    
+}
+.container{
+    display: flex;
+    position: relative;
+    width: 100%;
+   
+    z-index: 1;
+}
+
+video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.conteudo{
+    display: grid;
+    grid-template-areas: 
+    "A  A"
+    "B  B"
+    "C  C";
+    grid-template-rows: max-content 1fr max-content;
+    z-index: 3;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.11);
+}
+.conteudo header{
+    grid-area: A;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 30px;
+}
+
+.container h2{
+    color: rgba(240, 248, 255, 0.523);
+    font-family: monospace;
+    font-size: 36px;
+    cursor: pointer;
+}
+.container h2:hover{
+    color: aliceblue;
+    transition: 0.5s;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 15px;
+}
+
+
+ul li a{
+    display: flex;
+    text-decoration: none;
+    color: rgba(240, 248, 255, 0.603);
+    gap: 15px;
+    font-size: 20px;
+    font-family: 'Fira Code', monospace;
+}
+
+ul li a:hover{
+    color: aliceblue;
+    transition: 0.5s;
+}
+.conteudo main{
+    grid-area: B;
+    display: flex;
+    align-items: baseline;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+}
+.conteudo main .escrita{
+    display: flex;
+    width: min-content;
+    height: min-content;
+    
+}
+.conteudo main .escrita h1{
+    display: flex;
+    font-size: 170px;
+
+    color: rgba(240, 248, 255, 0.37);
+
+    font-family: 'Fira Code', monospace;
+
+}
+
+.conteudo main .paragrafo{
+    display: flex;
+    width: 505px;
+    height: fit-content;
+    
+}
+.conteudo main .paragrafo p{
+    display: flex;
+    font-size: 30px;
+
+    color: rgba(240, 248, 255, 0.81);
+
+    font-family: 'Fira Code', monospace;
+}
+
+
+.conteudo footer{
+    grid-area: C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+}
+.conteudo footer p{
+    font-size: 30px;
+    color: rgba(240, 248, 255, 0.81);
+    font-family: 'Fira Code', monospace;
+    text-align: center;
+}
+    
